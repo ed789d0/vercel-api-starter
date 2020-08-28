@@ -1,5 +1,5 @@
 import { NowRequest, NowResponse } from "@vercel/node";
-
+import { https }  from "https";
 export default (req: NowRequest, res: NowResponse) => {
   let c = 0;
   https.get(decodeURI(req.body.jsonfile), (resp) => {
